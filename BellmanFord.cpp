@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+
 using namespace std;
 
 struct Hako
@@ -10,6 +11,12 @@ int main() {
     // N =no of nodes, E=edge
     int N,E; cin>> N >> E; 
     int saisho; cin >> saisho;
+        
+    clock_t start;
+    double duration;
+
+    start = clock();
+        
     Hako ArEdge[E];
     int answer[N]; 
     //to store min omosa (weight)
@@ -19,6 +26,11 @@ int main() {
     }
 
     Function(ArEdge, E, answer, N, saisho);
+    
+    duration = ( clock() - start ) / (double) CLOCKS_PER_SEC;
+
+    cout<<"printf: "<< duration <<'\n';
+    
     return 0;
 }
 void Function(const Hako ArEdge[], int E, int answer[], int N, int saisho) {
