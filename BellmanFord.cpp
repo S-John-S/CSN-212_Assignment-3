@@ -24,3 +24,11 @@ int main() {
 void Function(const Hako ArEdge[], int E, int answer[], int N, int saisho) {
     for(int i=0; i<N; i++)
         answer[i]=INT_MAX;
+
+    answer[saisho]=0;
+    for(int i=0; i<N; i++) {
+        for(int j=0; j<E; j++) {
+            if(answer[ArEdge[j].saisho]+ArEdge[j].omosa<answer[ArEdge[j].saigo])
+                answer[ArEdge[j].saigo]=answer[ArEdge[j].saisho]+ArEdge[j].omosa;
+        }
+    }
