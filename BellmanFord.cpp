@@ -37,3 +37,10 @@ for(int i=0; i<E; i++) {
             cout<<"Wrong answer inevitable"<<endl;
         }
     }
+
+    cout<<"Min weight corresponding to each V => "<<saisho<<endl;
+    cout<<"Vertex"<<" Cost"<<endl;
+    for(int i=0; i<N; i++) {
+        cout<<i<<"     "<<answer[i]<<endl;
+    }
+}
