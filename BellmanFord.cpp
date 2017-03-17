@@ -32,3 +32,8 @@ void Function(const Hako ArEdge[], int E, int answer[], int N, int saisho) {
                 answer[ArEdge[j].saigo]=answer[ArEdge[j].saisho]+ArEdge[j].omosa;
         }
     }
+for(int i=0; i<E; i++) {
+        if(answer[ArEdge[i].saisho]+ArEdge[i].omosa<answer[ArEdge[i].saigo]) {
+            cout<<"Wrong answer inevitable"<<endl;
+        }
+    }
