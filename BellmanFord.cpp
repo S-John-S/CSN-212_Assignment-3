@@ -21,3 +21,6 @@ int main() {
     Function(ArEdge, E, answer, N, saisho);
     return 0;
 }
+void Function(const Hako ArEdge[], int E, int answer[], int N, int saisho) {
+    for(int i=0; i<N; i++)
+        answer[i]=INT_MAX;
